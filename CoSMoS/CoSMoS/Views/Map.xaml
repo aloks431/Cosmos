@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             mc:Ignorable="d"
+             x:Class="CoSMoS.Views.Map">
+    <maps:Map x:Name="map"
+               IsShowingUser="True"
+               MoveToLastRegionOnLayoutChange="False">
+        <x:Arguments>
+            <maps:MapSpan>
+                <x:Arguments>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.83</x:Double>
+                            <x:Double>4.37</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                    <x:Double>0.05</x:Double>
+                    <x:Double>0.05</x:Double>
+                </x:Arguments>
+            </maps:MapSpan>
+        </x:Arguments>
+        <maps:Map.Pins>
+            <maps:Pin Label="Here you are"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.83</x:Double>
+                            <x:Double>4.37</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8145208</x:Double>
+                            <x:Double>4.372377</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8365579</x:Double>
+                            <x:Double>4.3817391</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Moderate"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8486558</x:Double>
+                            <x:Double>4.3648273</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8460835</x:Double>
+                            <x:Double>4.3660156</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8616244</x:Double>
+                            <x:Double>4.3803911</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8679291</x:Double>
+                            <x:Double>4.3927084</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8679731</x:Double>
+                            <x:Double>4.3999436</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+            <maps:Pin Label="Critical"
+                       Type="Generic">
+                <maps:Pin.Position>
+                    <maps:Position>
+                        <x:Arguments>
+                            <x:Double>50.8758999</x:Double>
+                            <x:Double>4.3926812</x:Double>
+                        </x:Arguments>
+                    </maps:Position>
+                </maps:Pin.Position>
+            </maps:Pin>
+        </maps:Map.Pins>
+    </maps:Map>
+</ContentPage>

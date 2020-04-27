@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:CoSMoS.ViewModels"
+             mc:Ignorable="d"
+             x:Class="CoSMoS.Views.Symptoms">
+    <ContentPage.BindingContext>
+        <viewModels:SymptomsViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout VerticalOptions="FillAndExpand" Margin="10">
+                <Label Text="Symptoms" FontSize="Large"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Switch Grid.Row="0" Grid.Column="0" IsEnabled="True"  IsToggled="{Binding Symptoms.IsFever}"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Fever" FontSize="Large"/>
+                    <Switch Grid.Row="1" Grid.Column="0" IsEnabled="True" IsToggled="{Binding Symptoms.IsCough}"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="Cough" FontSize="Large"/>
+                    <Switch Grid.Row="2" Grid.Column="0" IsEnabled="True" IsToggled="{Binding Symptoms.IsRunnyNose}"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="Runny Nose" FontSize="Large"/>
+                    <Switch Grid.Row="3" Grid.Column="0" IsEnabled="True" IsToggled="{Binding Symptoms.IsFatigue}"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="Fatigue" FontSize="Large"/>
+                </Grid>
+                <Label Text="Other Symptoms" FontSize="Large"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Switch Grid.Row="0" Grid.Column="0" IsToggled="{Binding Symptoms.IsShortnessOfBreath}"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Shortness of breath" FontSize="Large"/>
+                    <Switch Grid.Row="1" Grid.Column="0" IsEnabled="True" IsToggled="{Binding Symptoms.IsHeadaches}"/>
+                    <Label Grid.Row="1" Grid.Column="1" Text="Headaches" FontSize="Large"/>
+                    <Switch Grid.Row="2" Grid.Column="0" IsEnabled="True" IsToggled="{Binding Symptoms.IsDifficultyInBreathing}"/>
+                    <Label Grid.Row="2" Grid.Column="1" Text="Difficulty in breathing" FontSize="Large"/>
+                    <Switch Grid.Row="3" Grid.Column="0" IsEnabled="True" IsToggled="{Binding Symptoms.IsDiarrhea}"/>
+                    <Label Grid.Row="3" Grid.Column="1" Text="Diarrhea" FontSize="Large"/>
+                </Grid>
+                <Label Text="Age:" FontSize="Large"/>
+                <Entry Text="{Binding Symptoms.Age}"/>
+                <Label Text="Sex:" FontSize="Large"/>
+                <Picker>
+                    <Picker.Items>
+                        <x:String>Male</x:String>
+                        <x:String>Female</x:String>
+                    </Picker.Items>
+                </Picker>
+                <Label Text="Zip Code:" FontSize="Large"/>
+                <Entry Text="{Binding Symptoms.ZipCode}"/>
+                <Label Text="City:" FontSize="Large"/>
+                <Entry Text="{Binding Symptoms.City}"/>
+                <Label Text="Body Temperature:" FontSize="Large"/>
+                <Entry Text="{Binding Symptoms.BodyTemperature}"/>
+                <Label Text="Be careful" FontSize="Large"/>
+                <Label Text="{Binding Status}" FontSize="Large" BackgroundColor="{Binding StatusBackground}"/>
+                <Button Text="CHECK" BackgroundColor="Blue" WidthRequest="200" HorizontalOptions="Start" Command="{Binding CheckCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
